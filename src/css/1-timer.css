@@ -1,0 +1,178 @@
+/* Загальні налаштування сторінки */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  background-color: #f0f0f0;
+  margin: 36px 156px;
+  padding: 20px;
+}
+
+.nav {
+  position: fixed;
+  top: 0; /* Відстань від верхнього краю */
+  left: 0; /* Відстань від лівого краю */
+  margin: 10px;
+}
+
+/* Контейнер для інпуту та кнопки */
+.controls {
+  display: flex;
+  align-items: center; /* Вирівнювання по вертикалі */
+  gap: 8px; /* Відстань між інпутом і кнопкою */
+  margin-bottom: 32px; /* Відступ знизу від таймера */
+  max-width: 355px;
+  min-height: 40px;
+}
+
+/* Стиль для інпуту вибору дати */
+#datetime-picker {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+  color: inherit;
+  border-radius: 4px;
+  background: #fff;
+  width: 280px;
+}
+
+#datetime-picker:hover {
+  border: 1px solid #000;
+}
+
+#datetime-picker:focus {
+  border: 1px solid #4e75ff !important;
+  outline: none;
+  color: #000;
+}
+
+#datetime-picker:disabled {
+  border: 1px solid #808080;
+  color: #808080;
+  background: #fafafa;
+  cursor: not-allowed;
+}
+
+/* Кнопка старт */
+button[data-start] {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background: #4e75ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  cursor: pointer;
+}
+
+button[data-start]:hover {
+  background: #6c8cff;
+}
+
+button[data-start]:disabled {
+  background: #cfcfcf;
+  cursor: not-allowed;
+}
+
+/* Стиль для таймера */
+.timer {
+  display: flex;
+  width: 346px;
+  height: 72px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Вирівнювання тексту по центру */
+}
+
+.value {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+.label {
+  text-transform: uppercase;
+}
+
+.flatpickr-calendar {
+  border-radius: 8px;
+  padding: 16px;
+  width: 280px;
+  height: 352px;
+  background: #f5f5f5;
+}
+
+.flatpickr-monthDropdown-months {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #333 !important;
+}
+
+.flatpickr-current-month .cur-year {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #333 !important;
+}
+
+.flatpickr-weekdays {
+  font-weight: 500;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+.flatpickr-days {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #666;
+}
+
+/* Стиль для актуальної дати (current day) */
+.flatpickr-day.today {
+  border: 1px solid #4e75ff !important; /* Незамальований синій кружечок */
+  background-color: transparent !important; /* Прозорий фон */
+}
+
+/* Стиль для дати при ховері */
+.flatpickr-day:hover {
+  background-color: #c1c1c1 !important; /* Сірий фон при ховері */
+  border: none !important; /* Без обводки при ховері */
+}
+
+/* Стиль для вибраної дати */
+.flatpickr-day.selected {
+  background-color: #4e75ff !important; /* Синій фон */
+  color: #fff !important; /* Білий текст */
+  border: none !important; /* Без обводки */
+}
+
+/* Плавний перехід для анімації */
+.flatpickr-day {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.flatpickr-time {
+  font-weight: 600;
+  font-size: 16px !important;
+  color: #333;
+}

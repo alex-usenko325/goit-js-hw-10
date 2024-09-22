@@ -1,7 +1,5 @@
-// Описаний в документації
 import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -22,6 +20,20 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  locale: {
+    weekdays: {
+      shorthand: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'], // Two-letter weekday abbreviations
+      longhand: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+    },
+  },
   onClose(selectedDates) {
     const selectedDate = selectedDates[0];
     if (selectedDate <= new Date()) {
@@ -33,7 +45,7 @@ const options = {
       startButton.disabled = true;
       userSelectedDate = null;
     } else {
-      startButton.disabled = false; // Активуємо кнопку, якщо дата валідна
+      startButton.disabled = false; // Activate button if valid date
       userSelectedDate = selectedDate;
       iziToast.success({
         title: 'Success',
@@ -44,6 +56,7 @@ const options = {
   },
 };
 
+// Initialize flatpickr
 flatpickr(datetimePicker, options);
 
 startButton.addEventListener('click', () => {
@@ -69,6 +82,7 @@ function startCountdown(endDate) {
         message: 'The countdown has ended.',
         position: 'topRight',
       });
+      startButton.disabled = false; // Re-enable button after countdown ends
       return;
     }
 
