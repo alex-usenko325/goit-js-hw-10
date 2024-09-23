@@ -1,0 +1,86 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  background-color: #f0f0f0;
+  margin: 36px 156px;
+  padding: 20px;
+}
+
+input {
+  cursor: pointer;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  min-height: 40px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.form-label,
+.delay-label {
+  margin-bottom: 24px;
+  max-width: 360px;
+}
+
+.delay-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.delay-label input {
+  margin-top: 8px;
+  -moz-appearance: textfield; /* Для Firefox */
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Для Chrome, Safari і Edge */
+  margin: 0;
+}
+
+.radio-fieldset {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+}
+
+input[type='radio'] {
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background: #4e75ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6c8cff;
+}
