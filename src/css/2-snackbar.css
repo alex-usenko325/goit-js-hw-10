@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -13,8 +17,6 @@ input {
   cursor: pointer;
   border: 1px solid #808080;
   border-radius: 4px;
-  width: 360px;
-  min-height: 40px;
 }
 
 .nav {
@@ -24,32 +26,43 @@ input {
   margin: 10px;
 }
 
-.form-label,
-.delay-label {
-  margin-bottom: 24px;
+.form-label {
   max-width: 360px;
+  margin-bottom: 24px;
 }
 
 .delay-label {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .delay-label input {
-  margin-top: 8px;
-  -moz-appearance: textfield; /* Для Firefox */
+  max-height: 40px;
+  margin: 8px 0;
+  padding: 16px 8px;
+  color: #2e2f42;
 }
 
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none; /* Для Chrome, Safari і Edge */
-  margin: 0;
+.delay-label input:hover {
+  border: 1px solid #000;
+}
+
+.delay-label input:focus {
+  border: 1px solid #4e75ff;
+  outline: none;
 }
 
 .radio-fieldset {
   display: flex;
   align-items: center;
+  padding: 24px 48px 8px;
   gap: 54px;
+  border: 1px solid #808080;
+}
+
+.radio-fieldset:hover {
+  border-color: #000;
 }
 
 .radio-label {

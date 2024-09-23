@@ -1,6 +1,4 @@
-// Описаний у документації
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 
 document.querySelector('.form').addEventListener('submit', function (event) {
@@ -24,16 +22,16 @@ document.querySelector('.form').addEventListener('submit', function (event) {
   promise
     .then(delay => {
       iziToast.success({
-        title: '',
         message: `Fulfilled promise in ${delay}ms`,
         position: 'topRight',
+        timeout: 3000,
       });
     })
     .catch(delay => {
       iziToast.error({
-        title: '',
         message: `Rejected promise in ${delay}ms`,
         position: 'topRight',
+        timeout: 3000,
       });
     });
 });
